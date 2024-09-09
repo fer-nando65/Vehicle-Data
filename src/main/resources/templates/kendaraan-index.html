@@ -8,6 +8,7 @@
     <link rel="shortcut icon" th:href="favicon.ico" type="image/ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" th:href="@{/resources/css/kendaraan.css}">
+    <script th:src="@{/resources/js/kendaraan-delete.js}" defer></script>
 </head>
 
 <body>
@@ -31,7 +32,7 @@
                 </div>
                 <div class="group-button">
                     <button type="submit" class="btn btn-primary">Search</button>
-                    <a href="" class="btn btn-secondary">Add</a>
+                    <a th:href="@{/kendaraan/upsert}" class="btn btn-secondary">Add</a>
                 </div>
             </form>
         </div>
@@ -63,12 +64,22 @@
                         <td th:text="*{fuelType}"></td>
                         <td class="action-buttons">
                             <a href="#" class="btn btn-detail">Detail</a>
-                            <a href="#" class="btn btn-edit">Edit</a>
-                            <a href="#" class="btn btn-delete">Delete</a>
+                            <a th:href="@{/kendaraan/upsert(id=*{id})}" class="btn btn-edit">Edit</a>
+                            <button type="button" class="btn btn-delete" th:id="*{id}">Delete</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
+        </div>
+    </div>
+
+    <div class="overlay" id="confirmationPopup">
+        <div class="popup">
+            <p>Anda yakin menghapus data <span class="id-kendaraan"></span></p>
+            <div class="actions">
+                <button id="continue-delete">OK</button>
+                <button id="abort-delete">Batal</button>
+            </div>
         </div>
     </div>
 </body>

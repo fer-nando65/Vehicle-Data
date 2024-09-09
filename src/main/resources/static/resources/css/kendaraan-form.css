@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 30px auto;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  padding: 10px 20px;
+}
+
+form {
+  width: 70%;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.form-row input[type="text"] {
+  width: 170%;
+  padding: 8px;
+  margin-top: 8px;
+}
+
+.form-row select {
+  width: 181%;
+  padding: 8px;
+  margin-top: 8px;
+}
+
+.form-row textarea {
+  width: 166%;
+  padding: 8px;
+  margin-top: 8px;
+}
+
+.form-row textarea {
+  height: 100px;
+  resize: none;
+}
+
+.form-actions {
+  padding: 10px 20px;
+}
+
+.form-actions button {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  width: 20%;
+}
+
+.form-actions button[type="button"] {
+  background-color: #6c757d;
+}
+
+.form-row .row {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row .row.option {
+  width: 26%;
+}
+
+a {
+  padding: 10px 40px;
+  background-color: gray;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}

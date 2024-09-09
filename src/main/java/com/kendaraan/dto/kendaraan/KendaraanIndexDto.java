@@ -1,4 +1,4 @@
-package com.kendaraan.dto;
+package com.kendaraan.dto.kendaraan;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
