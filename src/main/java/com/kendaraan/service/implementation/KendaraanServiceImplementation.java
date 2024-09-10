@@ -121,4 +121,9 @@ public class KendaraanServiceImplementation implements KendaraanService {
         var kendaraan = this.repository.findById(id).orElseThrow();
         this.repository.delete(kendaraan);
     }
+
+    @Override
+    public String getTitle(String id){
+        return (id.equals("")) ? "Tambah" : "Edit";
+    }
 }

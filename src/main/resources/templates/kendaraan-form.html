@@ -10,7 +10,7 @@
 
 <body>
     <div class="container">
-        <h2>Tambah Data Kendaraan</h2>
+        <h2><span th:text="${titleForm}"></span> Data Kendaraan</h2>
         <form method="post" th:attr="action=@{/kendaraan/upsert}" th:object="${kendaraanDetail}">
             <div class="form-row">
                 <div class="row">

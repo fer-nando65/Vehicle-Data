@@ -29,8 +29,10 @@ public class KendaraanController {
     public String upsert(@RequestParam(defaultValue = "") String id,
                          Model model){
         var detail = this.service.getkendaraan(id);
+        var title = this.service.getTitle(id);
         model.addAttribute("kendaraanDetail", detail);
         model.addAttribute("listOptionColor", detail.getOptionColor());
+        model.addAttribute("titleForm", title);
         return "kendaraan-form";
     }
 

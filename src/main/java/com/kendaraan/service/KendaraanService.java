@@ -10,4 +10,5 @@ public interface KendaraanService {
     KendaraanUpsertDto getkendaraan(String id);
     void save(KendaraanUpsertDto dto);
     void delete(String id);
+    String getTitle(String id);
 }
